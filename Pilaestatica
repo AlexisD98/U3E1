@@ -1,0 +1,47 @@
+package pilaestatica;
+import java.util.*;
+public class Pilaestatica {
+    public static void main(String[] args) {
+        /*
+        1. Crear arreglo de 5 posiciones.
+        2. Defnir el menu con switch y dentro de un while.
+        3. Condicionar mis metodos.
+        4. Los datos se deben mostrar en orden conforme se meten.
+        */
+        Metodospila objMetodospila = new Metodospila();
+        
+        Scanner entrada=new Scanner(System.in);
+        int opc,c = 0;
+        int dato=0;
+        
+        do{
+            System.out.println(" *Pila Estatica GamerPink* ");
+            System.out.println("-----------------------------");
+            System.out.println("Selecciones su Opcion: ");
+            System.out.println("1 Insertar Dato");
+            System.out.println("2 Mostrar Dato");
+            System.out.println("3 Eliminar Dato");
+            System.out.println("4 Salir");
+            System.out.println("-----------------------------");
+            opc = entrada.nextInt();
+            System.out.println("-----------------------------");
+            switch (opc) {
+                case 1:
+                    objMetodospila.inserta();
+                    System.out.println("******************************");
+                    break;
+                case 2:
+                    objMetodospila.mostrar();
+                    System.out.println("******************************");
+                    break;
+                case 3:
+                    objMetodospila.eliminnar();
+                    System.out.println("******************************");
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+            }//switch
+        } while (c == 0);
+    }
+}
