@@ -1,0 +1,38 @@
+package pilaestatica;
+import java.util.*;
+public class Metodospila {
+    Scanner entrada = new Scanner(System.in);
+    String [] pilae= new String [5];
+    int conta=-1;
+    
+    public void inserta(){
+        if(conta>=pilae.length-1){
+            System.out.println("No hay espacio");
+        }else{
+            conta++;
+            System.out.println("Inserte dato: ");
+            pilae[conta] =entrada.next();
+        }
+    }
+    
+    public void mostrar(){
+        if(conta==-1){
+            System.out.println("No hay datos");
+        }else{
+            System.out.println("Datos desde tu pila");
+            for(int i=0; i<pilae.length;i++)
+                System.out.println(pilae[i]);
+        }
+    }
+    
+    public int eliminnar(){
+        if(conta==-1){
+            System.out.println("No hay datos");
+        }else{
+            pilae[conta]=null;
+            conta--;
+        }
+        return conta;
+    }
+    
+}
